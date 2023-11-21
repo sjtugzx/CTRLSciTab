@@ -12,7 +12,7 @@ import time
 
 
 
-openai.api_key = "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"
+openai.api_key = "YOUR_API_KEY"
 
 
 def get_chatgpt_response(messages):
@@ -24,10 +24,6 @@ def get_chatgpt_response(messages):
                          json={
                              "model": "gpt-3.5-turbo",
                              "messages": messages,
-                         },
-                         proxies={
-                             "http": "http://10.10.1.3:10000",
-                             "https": "http://10.10.1.3:10000",
                          }
     )
     # 解析响应
